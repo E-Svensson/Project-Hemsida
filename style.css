@@ -1,17 +1,49 @@
 body{
-    background-color: rgb(255, 123, 0);
+    background-color: rgb(0, 0, 0);
     margin: 0;
 }
 
 body{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 60em 3em;
+    grid-template-rows: auto 3em;
     grid-template-areas: 
     "nav" 
     "main"
     "footer";
-    background-image: linear-gradient(rgb(0, 0, 0), 20%, rgb(255, 60, 0), rgb(255, 187, 1));
+    background-image: linear-gradient(rgb(0, 0, 0), 20%, rgb(255, 60, 0), rgb(255, 187, 1),rgb(255, 60, 0),rgb(0, 0, 0));
+    background-repeat: no-repeat;
+}
+
+#index main{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50em;
+    grid-template-areas: "div";
+}
+
+#kändisar main{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10em 10em 10em 10em 10em;
+    grid-template-areas: 
+    "div"
+    "div"
+    "div"
+    "div"
+    "div";
+}
+
+#lektion{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10em 10em 10em 10em 10em;
+    grid-template-areas: 
+    "div"
+    "div"
+    "div"
+    "div"
+    "div";
 }
 
 .sticky{
@@ -81,15 +113,13 @@ section{
     font-weight: bold;
 }
 
-.dropdown{
-    position: relative;
-}
-
 .dropdown-content{
     display: none;
     position: absolute;
     margin-top: 20em;
     margin-left: 20em;
+    box-shadow: 0 1em 1em;
+    border-radius: 1em;
 }
 
 .dropdown:hover .dropdown-content {display: block;}
@@ -109,21 +139,38 @@ a{
     border-radius: 1em;
 }
 
+/*Texterna*/
 ul li{
     font-size: 1.4em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
+    text-align: center;
 }
 
-li:hover{
-    padding-left: 1em;
-    background-color: rgb(226, 226, 226);
+/*När muspekaren går över listelementen (lektionerna) förutom den första ("rubriken")*/
+li:not(li:nth-child(1)):hover{
+    background-color: rgba(0, 0, 0, 10%);
     border-radius: 1em;
-    width: 6em;
+    text-decoration: underline;
 }
 
+/*Listorna i dropdown-menyn*/
+ul div:nth-child(1) { background-image: linear-gradient(lightgreen, rgba(0,0,0,0));}
+ul div:nth-child(2) { background-image: linear-gradient(rgb(255, 255, 110), rgba(0,0,0,0));}
+ul div:nth-child(3) { background-image: linear-gradient(rgb(255, 132, 132), rgba(0,0,0,0));}
+ul div{
+    border-radius: 1em;
+}
+
+/*Skapar en linje mellan rubrikerna och lektionerna*/
+ul div li:nth-child(1){ 
+    text-underline-offset: 0.4em;
+    text-decoration: underline black;
+}
+
+/*Listornas grid*/
 ul{
     display:grid;
     grid-template-columns: 12em 12em 12em;
