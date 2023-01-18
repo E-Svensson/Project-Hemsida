@@ -6,7 +6,7 @@ body{
 body{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 6em 60em 3em;
+    grid-template-rows: 60em 3em;
     grid-template-areas: 
     "nav" 
     "main"
@@ -26,12 +26,20 @@ nav{
     grid-template-rows: auto;
     grid-template-areas: "section section section section";
     background-image: linear-gradient(rgb(0, 0, 0), rgba(255, 123, 0, 0));
+
 }
 
 section{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.audio{
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    margin-right: 3em;
 }
 
 .clickable-home{ 
@@ -51,9 +59,9 @@ section{
     border-style: solid;
 }
 
-.clickable-primary:hover, .clickable-home:hover {opacity: 75%;}
+.clickable-primary:hover, .clickable-home:hover, .clickable-dropdown:hover{opacity: 75%;}
 
-.clickable-primary{ 
+.clickable-primary, .clickable-dropdown{ 
     text-align: center;
     color: rgb(0, 0, 0);
 
@@ -73,6 +81,19 @@ section{
     font-weight: bold;
 }
 
+.dropdown{
+    position: relative;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    margin-top: 20em;
+    margin-left: 20em;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
 h1{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
@@ -85,5 +106,33 @@ a{
     color: black;
     margin: 0;
     padding: 0;
+    border-radius: 1em;
+}
+
+ul li{
+    font-size: 1.4em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+li:hover{
+    padding-left: 1em;
+    background-color: rgb(226, 226, 226);
+    border-radius: 1em;
+    width: 6em;
+}
+
+ul{
+    display:grid;
+    grid-template-columns: 12em 12em 12em;
+    grid-template-rows: auto;
+    grid-template-areas: "div div div";
+
+    margin: 0;
+    padding: 1em;
+    list-style-type: none;
+    background-color: white;
     border-radius: 1em;
 }
