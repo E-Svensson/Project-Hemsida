@@ -52,13 +52,21 @@ body{
     width: 100%;
 }
 
-nav{
+#index nav{
     display: grid;
-    grid-template-columns: auto auto auto 75%;
+    grid-template-columns: auto auto 75%;
     grid-template-rows: auto;
     grid-template-areas: "section section section section";
     background-image: linear-gradient(rgb(0, 0, 0), rgba(255, 123, 0, 0));
 
+}
+
+#kändisar nav{
+    display: grid;
+    grid-template-columns: 112.8px;
+    grid-template-rows: auto;
+    grid-template-areas: "section";
+    background-image: linear-gradient(rgb(0, 0, 0), rgba(255, 123, 0, 0));
 }
 
 section{
@@ -113,11 +121,16 @@ section{
     font-weight: bold;
 }
 
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
 .dropdown-content{
     display: none;
     position: absolute;
-    margin-top: 20em;
-    margin-left: 20em;
+    margin-left: 1em;
+    margin-top: -1em;
     box-shadow: 0 1em 1em;
     border-radius: 1em;
 }
