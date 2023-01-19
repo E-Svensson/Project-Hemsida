@@ -15,17 +15,40 @@ body{
     background-repeat: no-repeat;
 }
 
+footer p{
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
 #index main{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 50em;
-    grid-template-areas: "section";
+    grid-template-rows: 10em 50em;
+    grid-template-areas: 
+    "section"
+    "section";
+}
+
+#index main img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 33%;
+    border-radius: 1em;
+}
+
+#index main p{
+    text-align: center;
 }
 
 #kändisar main{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 10em 10em 10em 10em 10em;
+    grid-template-rows: 10em 15em 15em 15em 15em;
     grid-template-areas: 
     "section"
     "section"
@@ -34,10 +57,19 @@ body{
     "section";
 }
 
-#lektion{
+main section h1{
+    text-align: center;
+    font-size: 2.2em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#lektion main{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 10em 10em 10em 10em 10em;
+    grid-template-rows: 10em 15em 15em 15em 15em;
     grid-template-areas: 
     "section"
     "section"
@@ -54,11 +86,10 @@ body{
 
 #index nav{
     display: grid;
-    grid-template-columns: auto auto 75%;
+    grid-template-columns: 10em 10em auto;
     grid-template-rows: auto;
-    grid-template-areas: "section section section section";
+    grid-template-areas: "section section section";
     background-image: linear-gradient(rgb(0, 0, 0), rgba(255, 123, 0, 0));
-
 }
 
 #kändisar nav{
@@ -69,7 +100,30 @@ body{
     background-image: linear-gradient(rgb(0, 0, 0), rgba(255, 123, 0, 0));
 }
 
-nav section{
+main section p{
+    font-size: 1.4em;
+    margin: 0;
+    padding: 1em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+#kändisar main section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#kändisar main img{
+    border-radius: 1em;
+    margin: 1em;
+    max-height: 100%;
+}
+
+#kändisar main section img{ max-width: 10em;}
+
+nav > section{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,9 +131,8 @@ nav section{
 
 .audio{
     display: flex;
-    align-items: right;
     justify-content: right;
-    margin-right: 3em;
+    margin-right: 1em;
 }
 
 .clickable-home{ 
@@ -129,34 +182,41 @@ nav section{
 .dropdown-content{
     display: none;
     position: absolute;
-    margin-left: 1em;
-    margin-top: -1em;
+    margin-left: 0;
     box-shadow: 0 1em 1em;
     border-radius: 1em;
 }
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+    display:grid;
+    grid-template-columns: 12em 12em 12em;
+    grid-template-rows: auto;
+    grid-template-areas: "span span span";
 
-nav h1{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    font-size: 1.4em;
-    color: white;
+    margin-left: 1em;
+    margin-top: -1em;
+    padding: 1em;
+    list-style-type: none;
+    background-color: white;
+    border-radius: 1em;
 }
 
-nav a{
+a{
     text-decoration: none;
     color: black;
     margin: 0;
     padding: 0;
     border-radius: 1em;
+}
 
+ul{
+    padding: 0;
+    margin: 0;
 }
-p{
-    font-size: 80%;
-}
+
 /*Texterna*/
 ul li{
+    list-style-type: none;
     font-size: 1.4em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -173,34 +233,15 @@ li:not(li:nth-child(1)):hover{
 }
 
 /*Listorna i dropdown-menyn*/
-ul span:nth-child(1) { background-image: linear-gradient(lightgreen, rgba(0,0,0,0));}
-ul span:nth-child(2) { background-image: linear-gradient(rgb(255, 255, 110), rgba(0,0,0,0));}
-ul span:nth-child(3) { background-image: linear-gradient(rgb(255, 132, 132), rgba(0,0,0,0));}
-ul span{
+ul:nth-child(1) { background-image: linear-gradient(lightgreen, rgba(0,0,0,0));}
+ul:nth-child(2) { background-image: linear-gradient(rgb(255, 255, 110), rgba(0,0,0,0));}
+ul:nth-child(3) { background-image: linear-gradient(rgb(255, 132, 132), rgba(0,0,0,0));}
+ul{
     border-radius: 1em;
 }
 
 /*Skapar en linje mellan rubrikerna och lektionerna*/
-ul span li:nth-child(1){ 
+ul li:nth-child(1){ 
     text-underline-offset: 0.4em;
     text-decoration: underline black;
-}
-
-/*Listornas grid*/
-ul{
-    display:grid;
-    grid-template-columns: 12em 12em 12em;
-    grid-template-rows: auto;
-    grid-template-areas: "span span span";
-
-    margin: 0;
-    padding: 1em;
-    list-style-type: none;
-    background-color: white;
-    border-radius: 1em;
-}
-img{
-    float: right;
-    border-radius: 20em;
-    
 }
