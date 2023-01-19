@@ -19,7 +19,7 @@ body{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 50em;
-    grid-template-areas: "div";
+    grid-template-areas: "section";
 }
 
 #kändisar main{
@@ -27,11 +27,11 @@ body{
     grid-template-columns: 100%;
     grid-template-rows: 10em 10em 10em 10em 10em;
     grid-template-areas: 
-    "div"
-    "div"
-    "div"
-    "div"
-    "div";
+    "section"
+    "section"
+    "section"
+    "section"
+    "section";
 }
 
 #lektion{
@@ -39,11 +39,11 @@ body{
     grid-template-columns: 100%;
     grid-template-rows: 10em 10em 10em 10em 10em;
     grid-template-areas: 
-    "div"
-    "div"
-    "div"
-    "div"
-    "div";
+    "section"
+    "section"
+    "section"
+    "section"
+    "section";
 }
 
 .sticky{
@@ -170,15 +170,15 @@ li:not(li:nth-child(1)):hover{
 }
 
 /*Listorna i dropdown-menyn*/
-ul div:nth-child(1) { background-image: linear-gradient(lightgreen, rgba(0,0,0,0));}
-ul div:nth-child(2) { background-image: linear-gradient(rgb(255, 255, 110), rgba(0,0,0,0));}
-ul div:nth-child(3) { background-image: linear-gradient(rgb(255, 132, 132), rgba(0,0,0,0));}
-ul div{
+ul span:nth-child(1) { background-image: linear-gradient(lightgreen, rgba(0,0,0,0));}
+ul span:nth-child(2) { background-image: linear-gradient(rgb(255, 255, 110), rgba(0,0,0,0));}
+ul span:nth-child(3) { background-image: linear-gradient(rgb(255, 132, 132), rgba(0,0,0,0));}
+ul span{
     border-radius: 1em;
 }
 
 /*Skapar en linje mellan rubrikerna och lektionerna*/
-ul div li:nth-child(1){ 
+ul span li:nth-child(1){ 
     text-underline-offset: 0.4em;
     text-decoration: underline black;
 }
@@ -188,7 +188,7 @@ ul{
     display:grid;
     grid-template-columns: 12em 12em 12em;
     grid-template-rows: auto;
-    grid-template-areas: "div div div";
+    grid-template-areas: "span span span";
 
     margin: 0;
     padding: 1em;
