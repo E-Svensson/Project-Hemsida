@@ -1,9 +1,8 @@
+/*Påverkar hela sidorda*/
 body{
     background-color: rgb(0, 0, 0);
     margin: 0;
-}
 
-body{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto 3em;
@@ -15,6 +14,7 @@ body{
     background-repeat: no-repeat;
 }
 
+/*Texten i footern*/
 footer p{
     text-align: center;
     margin-bottom: 1em;
@@ -24,6 +24,7 @@ footer p{
     font-weight: bold;
 }
 
+/*Grid för index*/
 #index main{
     display: grid;
     grid-template-columns: 100%;
@@ -33,6 +34,7 @@ footer p{
     "section";
 }
 
+/*Bilden i index*/
 #index main img{
     display: block;
     margin-left: auto;
@@ -41,10 +43,12 @@ footer p{
     border-radius: 1em;
 }
 
+/*Centrerar texten i index*/
 #index main p{
     text-align: center;
 }
 
+/*Griden i kändisar-sidan*/
 #kändisar main{
     display: grid;
     grid-template-columns: 100%;
@@ -57,6 +61,7 @@ footer p{
     "section";
 }
 
+/*Huvudrubriken i index*/
 main section h1{
     text-align: center;
     font-size: 2.2em;
@@ -66,24 +71,14 @@ main section h1{
     text-decoration: underline;
 }
 
-#lektion main{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 10em 15em 15em 15em 15em;
-    grid-template-areas: 
-    "section"
-    "section"
-    "section"
-    "section"
-    "section";
-}
-
+/*Sätter fast naven i toppen*/
 .sticky{
     position: fixed;
     top: 0;
     width: 100%;
 }
 
+/*Startsido-naven*/
 #index nav{
     display: grid;
     grid-template-columns: 10em 10em auto;
@@ -92,6 +87,7 @@ main section h1{
     background-image: linear-gradient(rgb(0, 0, 0), rgba(255, 123, 0, 0));
 }
 
+/*Kändisar-naven*/
 #kändisar nav{
     display: grid;
     grid-template-columns: 112.8px;
@@ -100,6 +96,7 @@ main section h1{
     background-image: linear-gradient(rgb(0, 0, 0), rgba(255, 123, 0, 0));
 }
 
+/*Texten på alla main*/
 main section p{
     font-size: 1.4em;
     margin: 0;
@@ -109,12 +106,14 @@ main section p{
     font-weight: bold;
 }
 
+/*Sätter all kändisar saker i mitten*/
 #kändisar main section{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/*Fixar storleken på kändisarnas bilder*/
 #kändisar main img{
     border-radius: 1em;
     margin: 1em;
@@ -123,18 +122,21 @@ main section p{
 
 #kändisar main section img{ max-width: 10em;}
 
+/*Sätter allting inom section i naven i mitten*/
 nav > section{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/*För bakgrundsmusiken*/
 .audio{
     display: flex;
     justify-content: right;
     margin-right: 1em;
 }
 
+/*Hemknappen*/
 .clickable-home{ 
     text-align: center;
     font-size: 2.2em;
@@ -152,8 +154,10 @@ nav > section{
     border-style: solid;
 }
 
+/*När muspekaren går över knapparna*/
 .clickable-primary:hover, .clickable-home:hover, .clickable-dropdown:hover{opacity: 75%;}
 
+/*Lektioner och kändisar knapparna*/
 .clickable-primary, .clickable-dropdown{ 
     text-align: center;
     color: rgb(0, 0, 0);
@@ -174,11 +178,13 @@ nav > section{
     font-weight: bold;
 }
 
+/*För dropdown-menyn*/
 .dropdown{
     position: relative;
     display: inline-block;
 }
 
+/*För dropdown-menyn*/
 .dropdown-content{
     display: none;
     position: absolute;
@@ -187,6 +193,7 @@ nav > section{
     border-radius: 1em;
 }
 
+/*Gör att dropdown-menyn håller sig uppe*/
 .dropdown:hover .dropdown-content {
     display:grid;
     grid-template-columns: 12em 12em 12em;
@@ -201,6 +208,7 @@ nav > section{
     border-radius: 1em;
 }
 
+/*Texten för alla länkar*/
 a{
     text-decoration: none;
     color: black;
@@ -209,12 +217,13 @@ a{
     border-radius: 1em;
 }
 
+/*Listorna i dropdown-menyn*/
 ul{
     padding: 0;
     margin: 0;
 }
 
-/*Texterna*/
+/*Texterna i listorna*/
 ul li{
     list-style-type: none;
     font-size: 1.4em;

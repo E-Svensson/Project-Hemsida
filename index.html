@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
+<head><!--Huvud-->
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
-<body id="index">
-    <nav class="sticky">
-        <section class="dropdown">
-            <button type="button" class="clickable-dropdown">
-                Lektioner <i class="fa fa-caret-down"></i>
+<body id="index"><!--Kropp med id Index-->
+    <nav class="sticky"><!--nav + klass sticky vilket gör den fast i toppen-->
+        <section class="dropdown"><!--Sektionen för lektionerna-->
+            <button type="button" class="clickable-dropdown"><!--Själva knappen-->
+                Lektioner <i class="fa fa-caret-down"></i><!--Pil nedåt-->
             </button>
-            <section class="dropdown-content">
-                <ul>
+            <section class="dropdown-content"><!--Sektionen för dropdown-menyn-->
+                <ul><!--Lista för lektioner-->
                     <li>Nybörjare</li>
                     <li><a href="index.html">Lektion 1</a></li>
                     <li><a href="index.html">Lektion 2</a></li>
                     <li><a href="index.html">Lektion 3</a></li>
                 </ul>
-                <ul>
+                <ul><!--Lista för lektioner-->
                     <li>Medelsvår</li>
                     <li><a href="index.html">Lektion 1</a></li>
                     <li><a href="index.html">Lektion 2</a></li>
                     <li><a href="index.html">Lektion 3</a></li>
                 </ul>
-                <ul>
+                <ul><!--Lista för lektioner-->
                     <li>Expert</li>
                     <li><a href="index.html">Lektion 1</a></li>
                     <li><a href="index.html">Lektion 2</a></li>
@@ -33,22 +33,22 @@
                 </ul>
             </section>
         </section>
-        <section>
-                <button type="button" class="clickable-primary" onclick="window.location.href='kandisar.html';">
-                    Kändisar
-                </button>
+        <section><!--Knapp för kändisar-->
+            <button type="button" class="clickable-primary" onclick="window.location.href='kandisar.html';">
+                Kändisar
+            </button>
         </section>
         <section class="audio">
-            <audio controls autoplay>
+            <audio controls autoplay><!--Bakgrundsmusiken, visar kontroller och autoplay-->
                 <source src="bakgrundsmusik.mp3" type="audio/mp3">
             </audio>
         </section>
     </nav>
     <main>
-        <section>
+        <section><!--Huvudrubrik-->
             <h1>Välkommen till en hemsida för dig som vill lära dig spela gitarr</h1>
         </section>
-        <section>
+        <section><!--Startsidans text-element + bild-->
             <p>
                 Våran hemsida är gjord för folk som vill lära sig spela gitarr och är även anpassad för folk utan händer. 
             </p>
@@ -62,7 +62,7 @@
             <img src="https://online.berklee.edu/takenote/wp-content/uploads/2021/01/acoustic_guitar_techniques_article_image_2021.jpg" alt="bild">
         </section>
     </main>
-    <footer>
+    <footer><!--Footer-->
         <p>Av Edvin Svensson, Abd Alruhman Alwan och Eric Rudenfors</p>
     </footer>
 </body>
